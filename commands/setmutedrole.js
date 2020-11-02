@@ -8,24 +8,24 @@ class SETMUTEDROLE extends Command {
     constructor() {
         super('setmutedrole', {
             aliases: ['setmutedrole'],
+            clientPermissions: ['MANAGE_GUILD'],
+            userPermissions: ['MANAGE_GUILD'],
             description: {
                 description: 'set the muted role for the current guild.',
                 usage: 'setmutedrole <role>',
                 example: 'setmutedrole @Muted'
                 },
-            args: [
-            ],
+            args: [{
+                id: 'role',
+                type: 'role',
+                otherwise: (message) => properCommandUsage('``$setmutedrole <role>``', '``$setmutedrole @Muted``', message)
+            }],
             channel: 'guild',
-            ownerOnly: true
             });
     }
     async exec(message, args) {
-        const mutedRole = message.mentions.roles.first()
-        if(mutedRole === undefined) {
-            return properCommandUsage('``$setmutedrole <role>``', '``$setmutedrole @Muted``', message)
-        }
-            mutedRoleUpdate(mutedRole, message)
-            respond(src.success +  ` **${message.guild.name}**'s muted role as **` + mutedRole.name + '**.', message)
+            mutedRoleUpdate(args.role.id, message)
+            respond(src.success +  ` **${message.guild.name}**'s muted role as **` + args.role.name + '**.', message)
             return;
     }
 }

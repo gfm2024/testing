@@ -7,6 +7,7 @@ class SETHELP extends Command {
     constructor() {
         super('sethelpmessage', {
             aliases: ['sethelpmessage'],
+            userPermissions: ['MANAGE_GUILD'],
             description: {
                 description: 'set the help message for the current guild. <DEPRECATED>',
                 usage: 'sethelpmessage',

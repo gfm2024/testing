@@ -9,24 +9,25 @@ class SETID extends Command {
             description: {
                 description: 'set your in-game ID.',
                 usage: 'setid <id>',
-                example: 'setid 123-123-123'
+                example: 'setid 123123123'
                 },
             args: [
                 {
-                    id: 'phrase',
-                    match: 'phrase',
-                    otherwise: (message) => properCommandUsage('``$setid <id>``', '``$setid 123-123-123``', message)
+                    id: 'integer',
+                    type: 'integer',
+                    otherwise: (message) => properCommandUsage('``$setid <id>``', '``$setid 123123123``', message)
                 }
             ],
             channel: 'guild'
         });
     }
     async exec(message, args) {
-        if(args.phrase.length !== 11) {
-            return properCommandUsage('``$setid <id>``', '``$setid 123-123-123``', message)
+        const test = JSON.stringify(args.integer)
+        if(test.length !== 9) {
+            return properCommandUsage('``$setid <id>``', '``$setid 123123123``', message)
         }
-            dbUserUpdate(args.phrase, message)
-            respond(src.success + ' set your ID as **' + args.phrase + '**.', message)
+            dbUserUpdate(args.integer, message)
+            respond(src.success + ' set your ID as **' + args.integer + '**.', message)
             return;
     }
 }
