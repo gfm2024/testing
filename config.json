@@ -1,0 +1,24 @@
+{
+    "colors": [
+        "00e1ff",
+        "00ff04",
+        "ffbf00",
+        "ff00ee",
+        "fffb00"
+    ],
+    "facts": [
+        "PES has been around since 2001",
+        "FIFA came out eight years before PES",
+        "there are ten 15 year olds in PES 2021",
+        "the original American title of pes was World Soccer: Winning Eleven 5",
+        "the tagline of Pro Evolution Soccer 2 was \"they will rock you\"",
+        "the founding creators of PES is Konami",
+        "PES *is* better than FIFA... I guess it's kind of a fact",
+        "the creator of the PES Discord Bot is Riqui#0001",
+        "the best way to customize in game experience is with patches",
+        "South Korea's kits in PES3 were missing the Nike swoosh although Juventus had it on their kits on the game.",
+        "most Ligue 1 in PES6 where all teams bar Paris Saint-Germain and RC Lens, the only French teams manufactured by Nike, were all given similar grey 'keeper uniforms.",
+        "in the Japanese version of PES 4, it is said that the Barclays Premier League (or at least Blackburn Rovers) is licensed in the PES 4 Japanese Version."
+    ],
+    "mongoPath": "mongodb+srv://admin:123@cluster0.1395l.mongodb.net/PES?retryWrites=true&w=majority"
+}
